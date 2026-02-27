@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern ToDo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <h1>ToDolist 1</h1>
+
+    <div class="input-bor">
+        <input id="task" type="text" placeholder="Жаңы тапшырма...">
+        <button onclick="add()">+</button>
+    </div>
+
+    <ul id="list"></ul>
+</div>
+
+<script>
+function add() {
+    const input = document.getElementById("task");
+    const text = input.value.trim();
+    if (!text) return;
+
+    const li = document.createElement("li");
+    li.innerHTML = `
+        <span onclick="this.parentElement.classList.toggle('done')">
+            ${text}
+        </span>
+        <small onclick="this.parentElement.remove()">✕</small>
+    `;
+
+    document.getElementById("list").appendChild(li);
+    input.value = "";
+}
+</script>
+
+</body>
+</html>

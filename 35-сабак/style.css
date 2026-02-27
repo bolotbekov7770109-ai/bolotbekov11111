@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg, #1f1c2c, #928dab);
+}
+
+.card {
+    width: 400px;
+    padding: 30px;
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    color: white;
+}
+
+.card h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.input-bor {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-bor input {
+    flex: 1;
+    padding: 14px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    font-size: 14px;
+}
+
+.input-bor input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.input-bor button {
+    padding: 14px 18px;
+    border: none;
+    border-radius: 15px;
+    background: #00f5a0;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-bor button:hover {
+    transform: scale(1.1);
+    background: #00d68f;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 12px 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    background: rgba(255,255,255,0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.4s ease;
+}
+
+li span {
+    cursor: pointer;
+}
+
+li small {
+    cursor: pointer;
+    color: #ff4d6d;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+li small:hover {
+    transform: scale(1.2);
+}
+
+.done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
